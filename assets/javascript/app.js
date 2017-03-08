@@ -1,5 +1,5 @@
 var correctAnswers = 0;
-var incorrectAnswers = 0;
+var timer;
 
 $(document).ready(function() {
     $("#quiz").hide()
@@ -18,7 +18,7 @@ function failed() {
 }
 
 function time() {
-    timer = 33;
+    timer = 63;
     timerId = setInterval(decrement, 1000);
 }
 
