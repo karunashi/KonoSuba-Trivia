@@ -1,33 +1,60 @@
+/**
+Quiz Container font styling
+**/
+
 #quiz {
-	font-family: 'Sigmar One', cursive;
+    font-family: 'Sigmar One', cursive;
 }
+
+
+/**
+Quiz start button to be fixed to center of the screen, with different font styling.
+**/
 
 .quizStart {
-	width: 300px;
-	height: 150px;
-	font-size: 30px;
-	font-family: 'Rock Salt', cursive;
+    width: 75%;
+    height: 150px;
+    font-size: 30px;
+    font-family: 'Rock Salt', cursive;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -37.5%;
 }
 
-img {
-	width: 25px;
-	height: 25px;
-}
+
+/**
+Extra check to ensure that the iframe element in the background can't be interacted with any mouse clicks.
+**/
 
 .bgblock {
-  pointer-events: none;
-  position: absolute;
+    pointer-events: none;
+    position: absolute;
 }
+
+
+/**
+Well bootstrap container element configured to be transparent to show the background better.
+**/
 
 .well {
-   background-color: rgba(245, 245, 245, 0.65);
+    background-color: rgba(245, 245, 245, 0.65);
 }
 
+
+/**
+Radio input selections font size.
+**/
 
 .radio-inline {
-	font-size: 17px;
+    font-size: 17px;
 }
 
+
+/**
+Questions font size.
+**/
+
 h4 {
-	font-size: 22px;
+    font-size: 22px;
 }
