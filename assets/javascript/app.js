@@ -1,22 +1,5 @@
-var questions = [{
-    question: "Test?",
-    choices: ["Abc", "aBc", "abC", "ABC"],
-    correctAnswer: 1
-}, {
-    question: "Test?12313123",
-    choices: ["aa", "abb", "acc", "Add"],
-    correctAnswer: 2
-}, {
-    question: "NAH",
-    choices: ["Abc", "aBc", "abC", "ABC"],
-    correctAnswer: 2
-}];
-
-var currentQues = 0; // Counter for which question user is on.
-var correctAnswers = 0; // Counter for correct guesses
-var gameOver = false; // Check for if game is over or not. ex: False = Game isn't over.
-var timer = 33;
-var timerId;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
 
 $(document).ready(function() {
     $("#quiz").hide()
@@ -30,12 +13,7 @@ $(".quizStart").on("click", function() {
 
 function failed() {
     clearInterval(timerId);
-    var status = $("<img>")
-    $(".question").html("Ran out of time!");
-    $(".choices").html("");
-    status.attr("src", "assets/images/timeout.gif")
-    $(".stat").append(status);
-    currentQues++;
+    submitAnswers()
     return;
 }
 
@@ -52,3 +30,18 @@ function decrement() {
         return;
     }
 }
+function submitAnswers()
+      {                   
+        clearInterval(timerId)
+for(var i = 1; i <= 45; i++) {
+  var radios = document.getElementsByName('Question'+i);
+  for(var j = 0; j < radios.length; j++) {
+    var radio = radios[j];
+    if(radio.value == "correct" && radio.checked) {
+      correctAnswers++;
+    }
+  }
+}                   
+        $("#quiz").empty();
+        $("#quiz").html("<h1>You got " + correctAnswers + " out of 6 correct</h1>")
+      }
