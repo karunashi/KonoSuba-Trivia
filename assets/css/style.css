@@ -1,14 +1,33 @@
 #quiz {
-	
+	font-family: 'Sigmar One', cursive;
 }
 
 .quizStart {
 	width: 300px;
 	height: 150px;
 	font-size: 30px;
+	font-family: 'Rock Salt', cursive;
 }
 
 img {
 	width: 25px;
 	height: 25px;
+}
+
+.bgblock {
+  pointer-events: none;
+  position: absolute;
+}
+
+.well {
+   background-color: rgba(245, 245, 245, 0.65);
+}
+
+
+.radio-inline {
+	font-size: 17px;
+}
+
+h4 {
+	font-size: 22px;
 }
