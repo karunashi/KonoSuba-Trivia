@@ -66,7 +66,7 @@ function submitAnswers() {
     }
     // Extra video changes if they get anything less than perfect. 
     else {
-        $("#bgblock").attr("src", "https://www.youtube.com/embed/UzMJp09_a5k?wmode=opaque&VQ=HD1080&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&playlist=UzMJp09_a5k")
+        $("#bgblock").attr("src", "https://www.youtube.com/embed/LqqI5G9OLpE?wmode=opaque&VQ=HD1080&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&playlist=LqqI5G9OLpE")
     }
 
 }
